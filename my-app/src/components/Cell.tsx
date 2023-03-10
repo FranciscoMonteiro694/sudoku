@@ -1,5 +1,9 @@
-function Cell() {
-  return <input className="cell"></input>;
+type CellProps = {
+  value: number;
+};
+
+function Cell({ value }: CellProps) {
+  return <input className="cell" value={value}></input>;
 }
 
 export default Cell;
