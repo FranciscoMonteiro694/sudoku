@@ -1,5 +1,5 @@
-import React from "react";
 import "./App.css";
+import Cell from "./components/Cell";
 
 const puzzle = [
   [1, 1, 1, 1, 1, 1, 1, 1, 1],
@@ -18,7 +18,23 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h3>Sudoku solver</h3>
-        <input className="cell"></input>
+        <table>
+          <tbody>
+            {puzzle.map((row, rowIndex) => {
+              return (
+                <tr key={rowIndex}>
+                  {row.map((col, colIndex) => {
+                    return (
+                      <td key={rowIndex + colIndex}>
+                        <Cell/>
+                      </td>
+                    );
+                  })}
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
       </header>
     </div>
   );
