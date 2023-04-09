@@ -1,12 +1,12 @@
 // This implementation was made by ChatGPT
 
-function solveSudoku(board) {
+const solveSudoku = function (board) {
   if (solveHelper(board, 0, 0)) {
     return board;
   } else {
     return null;
   }
-}
+};
 
 function solveHelper(board, row, col) {
   // Check if we have reached the end of the board
@@ -60,3 +60,5 @@ function isValid(board, row, col, digit) {
   // If none of the checks fail, the digit is valid
   return true;
 }
+
+export default solveSudoku;
