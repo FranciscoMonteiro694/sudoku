@@ -28,7 +28,7 @@
   font-size: 20px;
   text-align: center;
   padding: 0px;
-  border: 1px solid black;
+  border: 0.5px solid black;
 }
 
 table {
@@ -38,5 +38,12 @@ table {
 
 td {
   padding: 0;
-  border-left: 1px solid black;
+}
+
+.horizontalBorder {
+  border-bottom: 2px solid black;
+}
+
+.verticalBorder {
+  border-right: 2px solid black;
 }

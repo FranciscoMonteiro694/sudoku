@@ -22,10 +22,18 @@ function App() {
           <tbody>
             {puzzle.map((row, rowIndex) => {
               return (
-                <tr key={rowIndex}>
+                <tr
+                  key={rowIndex}
+                  className={(rowIndex + 1) % 3 === 0 ? "horizontalBorder" : ""}
+                >
                   {row.map((col, colIndex) => {
                     return (
-                      <td key={rowIndex + colIndex}>
+                      <td
+                        key={rowIndex + colIndex}
+                        className={
+                          (colIndex + 1) % 3 === 0 ? "verticalBorder" : ""
+                        }
+                      >
                         <Cell value={puzzle[rowIndex][colIndex]} />
                       </td>
                     );
